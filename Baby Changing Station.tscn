@@ -35,7 +35,7 @@ position = Vector2(393, 412)
 scale = Vector2(0.578125, 0.578125)
 texture = ExtResource("1_6tx5j")
 
-[node name="Button" type="Button" parent="Icon2"]
+[node name="Button2" type="Button" parent="Icon2"]
 auto_translate_mode = 1
 offset_left = -64.0
 offset_top = -64.0
@@ -48,7 +48,7 @@ position = Vector2(283, 470)
 scale = Vector2(0.578125, 0.578125)
 texture = ExtResource("1_6tx5j")
 
-[node name="Button" type="Button" parent="Icon3"]
+[node name="Button3" type="Button" parent="Icon3"]
 auto_translate_mode = 1
 offset_left = -64.0
 offset_top = -64.0
@@ -61,9 +61,14 @@ position = Vector2(302, 379)
 scale = Vector2(0.578125, 0.578125)
 texture = ExtResource("1_6tx5j")
 
-[node name="Button" type="Button" parent="Icon4"]
+[node name="Button4" type="Button" parent="Icon4"]
 auto_translate_mode = 1
 offset_left = -64.0
 offset_top = -64.0
 offset_right = 66.0
 offset_bottom = 64.0
+
+[connection signal="pressed" from="Icon/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Icon2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Icon3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Icon4/Button4" to="." method="_on_button_4_pressed"]
