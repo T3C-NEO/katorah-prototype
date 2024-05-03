@@ -1,7 +1,7 @@
+res://chores.tscn
 res://Main sccene.tscn
 res://Baby Changing Station.tscn
-res://main_sccene.gd
-res://baby_changing_station.gd
 res://work.tscn
-res://work.gd
 res://left.gd
+res://chores.gd
+res://work.gd
