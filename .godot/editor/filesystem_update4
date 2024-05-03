@@ -1,2 +1,8 @@
+res://drag_food_items.gd
+res://food_tem.tscn
+res://shopping.tscn
 res://Baby Changing Station.tscn
-res://Main sccene.tscn
+res://shopping.gd
+res://food_item.tscn
+res://groceries.tscn
+res://game.gd
