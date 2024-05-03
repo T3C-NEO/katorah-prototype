@@ -11,7 +11,10 @@ func _process(delta: float) -> void:
 	if step1 == 0:
 		get_node("Icon3").visible = true
 	if step1 == -4:
-		get_node("Baby").visible = false
+		visible = false
+		step1 = 2;
+		get_node("Icon").visible = true
+		get_node("Icon2").visible = true
 		
 		
 
