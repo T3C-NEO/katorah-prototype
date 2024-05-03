@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://hn45jtoacue8"]
+[gd_scene load_steps=5 format=3 uid="uid://hn45jtoacue8"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://main_sccene.gd" id="1_bg2rm"]
+[ext_resource type="Script" path="res://left.gd" id="2_fadb5"]
+[ext_resource type="PackedScene" uid="uid://bk2ljowoyy8cq" path="res://Baby Changing Station.tscn" id="2_tspuk"]
+[ext_resource type="PackedScene" uid="uid://babexr8x87f52" path="res://work.tscn" id="3_bqcye"]
+
+[node name="main scene" type="Node2D"]
+script = ExtResource("1_bg2rm")
+
+[node name="left" type="Node2D" parent="."]
+script = ExtResource("2_fadb5")
+
+[node name="baby changing station" parent="left" instance=ExtResource("2_tspuk")]
+visible = false
+
+[node name="work" parent="left" instance=ExtResource("3_bqcye")]
+visible = false
+
+[node name="right" type="Node2D" parent="."]
+position = Vector2(576, 0)
+script = ExtResource("2_fadb5")
+
+[node name="baby changing station" parent="right" instance=ExtResource("2_tspuk")]
+visible = false
+
+[node name="work" parent="right" instance=ExtResource("3_bqcye")]
+visible = false
