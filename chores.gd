@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_mouse_exited() -> void:
-	if Input.is_action_pressed("test"):
+	if Input.is_action_pressed("mouse_left"):
 		get_node("Background2/Icon").visible = false
 		visible = false
 

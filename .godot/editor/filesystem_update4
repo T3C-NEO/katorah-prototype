@@ -1,7 +1,8 @@
-res://chores.tscn
-res://Main sccene.tscn
+res://shopping.tscn
 res://Baby Changing Station.tscn
-res://work.tscn
-res://left.gd
+res://food_item.tscn
+res://groceries.tscn
+res://Main sccene.tscn
 res://chores.gd
-res://work.gd
+res://main_sccene.gd
+res://cleaning.gd

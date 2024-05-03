@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_mouse_entered() -> void:
-	if Input.is_action_pressed("test"):
+	if Input.is_action_pressed("mouse_left"):
 		visible = false
 		chores.cleaned -=1
