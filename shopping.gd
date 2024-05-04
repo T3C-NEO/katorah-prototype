@@ -31,3 +31,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if(area.name == "food_detection"):
 		pass
+
+
+func _on_button_pressed() -> void:
+	visible = false;
