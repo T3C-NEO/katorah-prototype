@@ -3,6 +3,6 @@ res://Baby Changing Station.tscn
 res://food_item.tscn
 res://groceries.tscn
 res://Main sccene.tscn
-res://chores.gd
-res://main_sccene.gd
-res://cleaning.gd
+res://work.tscn
+res://work.gd
+res://left.gd

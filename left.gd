@@ -3,6 +3,7 @@ extends Node2D
 var baby
 var work
 var chore
+var shop
 var games
 var curren
 var num
@@ -13,7 +14,8 @@ func _ready() -> void:
 	baby = get_node("baby changing station")
 	work = get_node("work")
 	chore = get_node("chores")
-	games = [baby, work, chore]
+	shop = get_node("shopping")
+	games = [baby, work, chore, shop]
 	num = rng.randi_range(0, games.size()-1)
 	games[num].visible = true
 	curren = num

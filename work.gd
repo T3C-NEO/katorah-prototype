@@ -6,7 +6,12 @@ var brown3
 var brown4
 var rng = RandomNumberGenerator.new()
 var fills 
+var total = 3
 var num
+var totals
+var totals1
+var totals2
+var totals3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	rng.randomize()
@@ -14,7 +19,14 @@ func _ready() -> void:
 	brown2 = get_node("Brown2")
 	brown3 = get_node("Brown3")
 	brown4 = get_node("Brown4")
+	totals1 = get_node("Icon")
+	totals2 = get_node("Icon2")
+	totals3 = get_node("Icon3")
 	fills = [brown1, brown2, brown3, brown4]
+	totals = [totals1, totals2, totals3]
+	totals1.visible = true
+	totals2.visible = true
+	totals3.visible = true
 	num = rng.randi_range(0, 3)
 	for n in num:
 		fills[n].visible = true
@@ -35,7 +47,6 @@ func _on_button_pressed() -> void:
 
 func _on_done_pressed() -> void:
 	if num == 3:
-		visible = false
 		brown1.visible = false
 		brown2.visible = false
 		brown3.visible = false
@@ -44,5 +55,9 @@ func _on_done_pressed() -> void:
 		for n in num:
 			fills[n].visible = true
 		num-=1
+		total -=1
+		totals[total].visible = false
+		if total == 0:
+			visible = false
 	else:
 		get_node("Lose").visible = true
