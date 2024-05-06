@@ -60,6 +60,9 @@ offset_bottom = 87.0
 theme_override_font_sizes/font_size = 25
 text = "CHECKOUT"
 
+[node name="middle" type="Marker2D" parent="."]
+position = Vector2(860, 0)
+
 [connection signal="area_entered" from="basket/basket_detection" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="basket/basket_detection" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

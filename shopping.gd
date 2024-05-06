@@ -8,15 +8,17 @@ extends Node2D
 @onready var food6 = $groceries6;
 @onready var food7 = $groceries7;
 
+@onready var mid = $middle;
+
+#seems like there's a bug when trying to add in the editor, so doing it manually 
+@onready var food_array : Array = [food, food2, food3, food4, food5, food6, food7];
+
 
 func _ready() -> void:
-	food.basket_pos = $basket.position;
-	food2.basket_pos = $basket.position;
-	food3.basket_pos = $basket.position;
-	food4.basket_pos = $basket.position;
-	food5.basket_pos = $basket.position;
-	food6.basket_pos = $basket.position;
-	food7.basket_pos = $basket.position;
+	for i in range(food_array.size()):
+		food_array[i].basket_pos = $basket.position;
+		food_array[i].left = mid.position.x - 240;
+		food_array[i].right = mid.position.x + 240;
 
 
 func _process(delta: float) -> void:
