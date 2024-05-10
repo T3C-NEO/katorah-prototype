@@ -1,7 +1,6 @@
 extends Node2D
 
 var baby
-var work
 var chore
 var shop
 var games
@@ -12,10 +11,9 @@ var rng = RandomNumberGenerator.new()
 func _ready() -> void:
 	rng.randomize()
 	baby = get_node("baby changing station")
-	work = get_node("work")
 	chore = get_node("chores")
 	shop = get_node("shopping")
-	games = [baby, work, chore, shop]
+	games = [baby, chore, shop]
 	num = rng.randi_range(0, games.size()-1)
 	games[num].visible = true
 	curren = num
@@ -23,7 +21,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if baby.visible == false and work.visible == false:
+	if baby.visible == false and chore.visible == false and shop.visible == false:
 		while num == curren:
 			num = rng.randi_range(0, games.size()-1)
 			print(num , " : " , curren)

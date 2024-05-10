@@ -31,11 +31,11 @@ func _ready() -> void:
 	for n in num:
 		fills[n].visible = true
 	num-=1
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_pressed("mouse_left"):
+		get_node("Lose").visible = false
 
 func _on_button_pressed() -> void:
 	num+=1
@@ -55,9 +55,17 @@ func _on_done_pressed() -> void:
 		for n in num:
 			fills[n].visible = true
 		num-=1
-		total -=1
-		totals[total].visible = false
-		if total == 0:
-			visible = false
+		#total -=1
+		#totals[total].visible = false
+		#if total == 0:
+			#total = 3
+			#visible = false
+			#totals1.visible = true
+			#totals2.visible = true
+			#totals3.visible = true
+			#num = rng.randi_range(0, 3)
+			#for n in num:
+				#fills[n].visible = true
+			#num-=1
 	else:
 		get_node("Lose").visible = true
